@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
-    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -21,7 +20,7 @@
     <body>
         <main class="auth-main">
             <div class="left">
-                <form class="auth-container">
+                <form id="in-container" class="auth-container">
                     <h3>Sign In</h3>
                     <label>Email</label>
                     <input type="email" name="email" id="sign-in-email">
@@ -31,7 +30,7 @@
                 </form>
             </div>
             <div class="right">
-                <form class="auth-container">
+                <form id="up-container" class="auth-container">
                     <h3>Sign Up</h3>
                     <label>Email</label>
                     <input type="email" name="email" id="sign-up-email">
@@ -44,7 +43,8 @@
             <p id="auth-error"></p>
             
         </main>
-        <script src="./auth.js" type="module"></script>
+        <script src="/AuthForm.js" type="module"></script>
+        <script src="/auth-fetch-utils.js" type="module"></script>
     </body>
 
 </html>

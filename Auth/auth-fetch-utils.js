@@ -10,7 +10,7 @@ export async function getUser() {
 export async function checkAuth() {
     const user = await getUser();
 
-    if (!user) location.replace('/Auth');
+    if (!user) location.replace('/auth');
 }
 
 export async function redirectIfLoggedIn() {
@@ -39,3 +39,4 @@ export async function createPost(post) {
     const resp = await client.from('posts').insert(post);
     return checkError(resp);
 }
+

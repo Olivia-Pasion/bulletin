@@ -19,6 +19,12 @@ export async function redirectIfLoggedIn() {
     }
 }
 
+export async function signUpUser(email, password) {
+    const response = await client.auth.signUp ({ email, password });
+
+    return response.user;
+}
+
 export async function signInUser(email, password) {
     const response = await client.auth.signIn({ email, password });
     
@@ -32,6 +38,7 @@ export async function logout() {
 }
 
 function checkError({ data, error }) {
+
     return error ? console.error(error) : data;
 }
 
