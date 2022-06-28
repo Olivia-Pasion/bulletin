@@ -21,27 +21,28 @@
     <body>
         <main class="auth-main">
             <div class="left">
-                <div class="auth-container">
-                    <h3></h3>
+                <form class="auth-container">
+                    <h3>Sign In</h3>
                     <label>Email</label>
                     <input type="email" name="email" id="sign-in-email">
                     <Label>Password</Label>
                     <input type="password" name="password" id="sign-in-password">
                     <button>Submit</button>
-                </div>
+                </form>
             </div>
             <div class="right">
-                <div class="auth-container">
-                    <div class="auth-container">
-                        <h3></h3>
-                        <label>Email</label>
-                        <input type="email" name="email" id="sign-up-email">
-                        <Label>Password</Label>
-                        <input type="password" name="password" id="sign-up-password">
-                        <button>Submit</button>
-                    </div>
-                </div>
+                <form class="auth-container">
+                    <h3>Sign Up</h3>
+                    <label>Email</label>
+                    <input type="email" name="email" id="sign-up-email">
+                    <Label>Password</Label>
+                    <input type="password" name="password" id="sign-up-password">
+                    <button>Submit</button>
+                </form>
             </div>
+
+            <p id="auth-error"></p>
+            
         </main>
         <script src="./auth.js" type="module"></script>
     </body>

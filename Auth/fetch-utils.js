@@ -10,7 +10,7 @@ export async function getUser() {
 export async function checkAuth() {
     const user = await getUser();
 
-    if (!user) location.replace('/auth');
+    if (!user) location.replace('/Auth');
 }
 
 export async function redirectIfLoggedIn() {
@@ -21,7 +21,7 @@ export async function redirectIfLoggedIn() {
 
 export async function signInUser(email, password) {
     const response = await client.auth.signIn({ email, password });
-    
+
     return response.user;
 }
 
@@ -33,11 +33,6 @@ export async function logout() {
 
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
-}
-
-export async function getPosts() {
-    const resp = await client.from('posts').select('*');
-    return checkError(resp);
 }
 
 export async function createPost(post) {
