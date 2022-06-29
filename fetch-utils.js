@@ -37,17 +37,17 @@ export async function logout() {
     return (window.location.href = '/');
 }
 
-function checkError({ data, error }) {
+// function checkError({ data, error }) {
 
-    return error ? console.error(error) : data;
-}
+//     return error ? console.error(error) : data;
+// }
 
 export async function getPosts() {
     const resp = await client.from('posts').select('*');
-    return checkError(resp);
+    return resp;
 }
 
 export async function createPost(post) {
     const resp = await client.from('posts').insert(post);
-    return checkError(resp);
+    return resp;
 }
