@@ -1,1 +1,20 @@
 /* CSS for home page (index.html) */
+
+#board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    border: 10px black;
+    min-width: calc(10em + 40px);
+    overflow: scroll;
+}
+
+.post-card {
+    background-color: rgb(255, 255, 101);
+    height: 15em;
+    width: 15em;
+    padding: 1em;
+    margin: 10px;
+}
